@@ -1,0 +1,17 @@
+import sys
+import math
+hmax=0
+imax=0
+mh=[]
+while True:
+    for i in range(8):
+        mountain_h = int(input())
+        mh.insert(i,mountain_h)
+    for j in range(8):
+        if mh[j]>=hmax:
+            hmax=mh[j]
+            imax=j   
+    print(imax)
+    hmax=0
+    imax=0
+    print(hmax,file=sys.stderr)
