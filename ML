@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+# MNIST For ML Beginners!
+
+# Just like programming has Hello World, machine learning has MNIST.
+# MNIST is a simple computer vision dataset. It consists of images of handwritten digits.
+# Src: https://goo.gl/B14py7
+
+# Importing input data
+import random
+import input_data
+a=raw_input() #1.file location with directory (train),
+b=raw_input() #2.file location with directory (train label),
+c=raw_input() #3.file location with directory (test data)
+mnist = input_data.read_data_sets(a,b,c) # reading datasets
+
+import tensorflow as tf
+x = tf.placeholder(tf.float32, [None, 784]) # creating an empty tensor with 784 elements (28x28)
+W = tf.Variable(tf.zeros([784, 10])) # creating a tensor with all zeroes 
+b = tf.Variable(tf.zeros([10])) # creating a tensor with all zeroes
+y = tf.nn.softmax(tf.matmul(x, W) + b) # softmax regression (The softmax function is often used in the final layer of a neural network-based classifier.)
+y_ = tf.placeholder(tf.float32, [None, 10]) 
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1])) # calculating cross-entrophy loss
+train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy) # reducing the loss using gradient decent
+init = tf.initialize_all_variables() 
+
+sess = tf.Session() # starting a tensorflow session
+sess.run(init) # running a tensorflow session and starting training
+for i in range(1000):
+	batch_xs, batch_ys = mnist.train.next_batch(100)
+	sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+
+result = sess.run(tf.argmax(y,1), feed_dict={x: mnist.validation.images}) # getting the output in the result
+print ' '.join(map(str, result)) # printing the output
