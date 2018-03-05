@@ -1,0 +1,15 @@
+n=int(input())
+
+t=n
+
+x=0
+
+for i in range(1,n+1):
+
+    print ('.'*(t)+'*'*(i+x)+'.'*(t))
+
+    t-=1
+
+    x+=1
+
+print('.'*(n)+'*'+'.'*(n),end="")

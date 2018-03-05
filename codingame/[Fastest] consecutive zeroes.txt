@@ -1,0 +1,17 @@
+import sys
+
+import math
+
+import re
+
+
+
+n = input()
+
+try:
+
+    print(max(len(s) for s in re.findall(r'0+', n)))
+
+except:
+
+    print(0)

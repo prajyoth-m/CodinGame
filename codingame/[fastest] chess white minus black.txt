@@ -1,0 +1,59 @@
+import sys
+
+import math
+
+
+w=0
+
+b=0
+
+n=int(input())
+
+for i in range(n):
+
+    s = input()
+
+    for x in s:
+
+        if x=='P':
+
+            w+=1
+
+        if x=='p':
+
+            b+=1
+
+        if x=='N':
+
+            w+=3
+
+        if x=='n':
+
+            b+=3
+
+        if x=='B':
+
+            w+=3
+
+        if x=='b':
+
+            b+=3
+
+        if x=='R':
+
+            w+=5
+
+        if x=='r':
+
+            b+=5
+
+        if x=='Q':
+
+            w+=9
+
+        if x=='q':
+
+            b+=9
+
+
+print(w-b if not(w-b==0) else "equal")

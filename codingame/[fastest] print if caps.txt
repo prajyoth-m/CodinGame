@@ -1,0 +1,15 @@
+import sys
+
+import math
+
+import re
+
+
+s = input()
+
+
+for i in s:
+
+    if i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+
+        print(i,end="")

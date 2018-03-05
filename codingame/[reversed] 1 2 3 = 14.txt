@@ -1,0 +1,12 @@
+r=0
+
+input()
+for i in input().split():
+
+    xi = int(i)
+
+    r+=xi**2
+
+
+
+print(r)

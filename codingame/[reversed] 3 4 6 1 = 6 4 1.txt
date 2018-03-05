@@ -1,0 +1,24 @@
+import sys
+
+import math
+
+r=[]
+
+n = int(input())
+
+for i in range(n):
+
+    x = int(input())
+
+    r.append(x)
+r.sort(reverse=True)
+
+for i,j in zip(r,range(1,len(r)+1)):
+
+    if j<len(r):
+
+        print(i,end=" ")
+
+    else:
+
+        print(i)

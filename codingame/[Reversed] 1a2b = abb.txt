@@ -1,0 +1,5 @@
+import re
+
+s=input()
+
+for i,j in zip(re.sub(r"[A-Za-z]"," ",s).split(),re.sub(r"[0-9]"," ",s).split()):print(j*int(i),end="")

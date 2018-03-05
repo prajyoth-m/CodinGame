@@ -1,0 +1,26 @@
+
+
+s = input()
+
+
+for i in s:
+
+    o=ord(i)
+
+    if o>65 and o<91:
+
+        for i in  range(65,o+1):
+
+            print(chr(i),end="")
+
+    elif o>97 and o<123:
+
+        for i in  range(97,o+1):
+
+            print(chr(i),end="")
+
+    elif o>48 and o<58:
+
+        for i in  range(48,o+1):
+
+            print(chr(i),end="")

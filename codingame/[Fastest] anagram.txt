@@ -1,0 +1,11 @@
+from collections import Counter as c
+s1="string"
+s2="gnirts"
+if c(s1)==c(s2):
+	print(1)
+else:
+	print(0)
+
+
+#1=true
+#0=false

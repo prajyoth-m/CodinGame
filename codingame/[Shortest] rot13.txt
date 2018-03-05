@@ -1,0 +1,4 @@
+from string import ascii_uppercase as a
+r=a+a
+for i in input():
+	print(r[(ord(i)-65)+13]if not(i==" ")else" ",end="")

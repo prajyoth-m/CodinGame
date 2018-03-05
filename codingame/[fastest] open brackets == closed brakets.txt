@@ -1,0 +1,19 @@
+
+
+s = input()
+
+o=0
+
+c=0
+
+for i in s:
+
+    if i=="(":
+
+        o+=1
+
+    if i==")":
+
+        c+=1
+
+print("true"if o==c else"false")

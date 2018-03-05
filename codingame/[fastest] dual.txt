@@ -1,0 +1,22 @@
+import sys
+
+import math
+
+
+
+
+hp1, d1 = [int(i) for i in input().split()]
+
+hp2, d2 = [int(i) for i in input().split()]
+
+c=0
+
+while(hp1>0 and hp2>0):
+
+    hp1-=d2
+
+    hp2-=d1
+
+    c+=1
+
+print(1 if hp1>0 else 2,c)

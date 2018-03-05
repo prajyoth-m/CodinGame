@@ -1,0 +1,9 @@
+# find the survivor
+n = int(input())
+peeps = list(range(1, n+1))
+idx = 0
+while len(peeps) > 1:
+    del peeps[((idx + 1) % len(peeps))]
+    idx = 0 if (idx >= len(peeps)-1) else (idx + 1)
+    
+print (peeps[0])

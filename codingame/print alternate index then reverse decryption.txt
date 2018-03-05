@@ -1,0 +1,9 @@
+s=input()
+x=[]
+for i in s:
+	x.append(s)
+for i in range(0,len(s),2):
+	print(x[i],end="")
+	x[i]=""
+for i in reversed(range(len(x))):
+	print(x[i],end="")

@@ -1,0 +1,3 @@
+import ipaddress as i
+
+print(int(i.IPv4Address(input())))

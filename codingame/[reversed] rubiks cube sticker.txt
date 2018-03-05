@@ -1,0 +1,33 @@
+import sys
+
+import math
+
+u=0
+
+b=0
+
+l=0
+
+f=0
+
+r=0
+
+d=0
+
+for i in range(11):
+
+    p = input()
+
+    u+=p.count("U")
+
+    b+=p.count("B")
+
+    l+=p.count("L")
+
+    f+=p.count("F")
+
+    r+=p.count("R")
+
+    d+=p.count("D")
+
+print("SOLVABLE" if u==9 and b==9 and l==9 and f==9 and r==9 and d==9 else "UNSOLVABLE")

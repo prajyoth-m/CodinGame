@@ -1,0 +1,7 @@
+n=float(input())
+
+b=input().split()
+
+c=filter((lambda x: b.count(x)/n>0.5),b)
+
+print c[0] if len(c)>0 else "conspiracy"

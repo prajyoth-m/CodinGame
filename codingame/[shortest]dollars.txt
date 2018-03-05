@@ -1,0 +1,7 @@
+a,x=[100,25,10,5,1],[]
+
+s=int(float(input()[1:])*100)
+
+for i in a:x+=[s//i];s=s%i
+
+print(*x)

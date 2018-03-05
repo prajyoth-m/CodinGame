@@ -1,0 +1,16 @@
+import sys
+
+import math
+
+
+n = input()
+
+for i in n:
+
+    if int(i)>4:
+
+        print(9-int(i),end="")
+
+    else:
+
+        print(i,end="")

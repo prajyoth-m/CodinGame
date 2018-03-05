@@ -1,0 +1,17 @@
+x=int(input())
+
+for i in range(int(input())):
+
+    f,t,c=input().split()
+
+    f=int(f)
+
+    t=int(t)
+
+    if x in range(f,t+1):
+
+        print(c)
+
+    elif x==0 and f==0 and t==0:
+
+        print(c)

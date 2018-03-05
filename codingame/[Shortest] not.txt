@@ -1,0 +1,1 @@
+for i in input():print(1if i=='0'else 0,end="")

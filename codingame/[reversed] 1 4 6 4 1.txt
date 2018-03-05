@@ -1,0 +1,13 @@
+n=int(input())
+
+B=[]
+
+for i in range(n):
+
+    B=[sum(B[j:j+2])for j in range(i)]
+
+    B[:0]=[1]
+
+    B[i+1:]=[1]
+
+print(*B)

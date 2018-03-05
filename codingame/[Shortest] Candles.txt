@@ -1,0 +1,25 @@
+c=int(input())
+
+t=c
+
+e=int(input())
+
+r=0
+
+try:
+
+    while(c>0):
+
+        r+=1
+
+        c-=1
+
+        if r/e==int(r/e):
+
+            r+=1
+
+    print(r if t>0 and e!=1 else "IMPOSSIBLE")
+
+except:
+
+    print(c+1)

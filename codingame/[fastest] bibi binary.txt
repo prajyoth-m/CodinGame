@@ -1,0 +1,8 @@
+#python2
+
+
+n = int(raw_input())
+
+f=lambda n:(n>15and f(n/16)or"")+"HBKD"[n/4%4]+"OAEI"[n%4]
+
+print f(n)

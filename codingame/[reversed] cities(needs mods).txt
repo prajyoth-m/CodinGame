@@ -1,0 +1,39 @@
+
+cn=[]
+
+uncn=[]
+
+r=[]
+
+n = int(input())
+
+for i in range(n):
+
+    city_name = input()
+
+    cn.append(city_name)
+
+m = int(input())
+
+for i in range(m):
+
+    uncleaned_city_name = input()
+
+    uncn.append(uncleaned_city_name)
+
+for i in cn:
+
+    for j in uncn:
+
+        tc=i.replace(" ","")
+
+        tunc=j.replace(" ","")
+
+        if tc.lower()==tunc.lower():
+
+            r.append(i)
+    
+
+for i in reversed(r):
+
+    print(i)

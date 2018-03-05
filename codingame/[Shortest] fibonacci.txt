@@ -1,0 +1,5 @@
+from math import sqrt as s
+f=lambda n: int(1/s(5)*((1+s(5))**n-(1-s(5))**n)/2**n)
+r=[]
+for i in range(int(input())):r.append(f(i))
+print(*r)

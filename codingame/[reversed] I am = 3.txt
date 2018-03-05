@@ -1,0 +1,11 @@
+import re
+
+m = input()
+
+m=m.replace(" ","")
+
+p=r"[0-9\W]"
+
+m=re.sub(p,"",m)
+
+print(len(m))

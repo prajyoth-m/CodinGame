@@ -1,0 +1,17 @@
+import sys
+
+import math
+
+
+
+s = input().split()
+
+for i,j in zip(s,range(len(s))):
+
+    if j<len(s)-1:
+
+        print(i[::-1],end=" ")
+
+    else:
+
+        print(i[::-1])

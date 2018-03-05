@@ -1,0 +1,5 @@
+o=n=input()
+
+while len(n)>1:n=str(sum(int(d)**2for d in n))
+
+print(o+' IS '+'UN'*(n>'1')+'HAPPY')
