@@ -1,0 +1,12 @@
+var N = parseFloat(readline());
+var a = parseFloat(N*-1)
+var b = parseFloat(1/N)
+var c = parseFloat(1/N*-1)
+
+print(a.toFixed(2)==a?a:a.toFixed(2)+'...')
+
+if(b==Infinity || b==-Infinity)print('error')
+else print(b.toFixed(2)==b?b:b.toFixed(2)+'...')
+
+if(c==Infinity || c==-Infinity)print('error')
+else print(c.toFixed(2)==c?c:c.toFixed(2)+'...')
